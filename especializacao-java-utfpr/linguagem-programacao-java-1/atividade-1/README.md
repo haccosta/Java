@@ -8,4 +8,3 @@ Apesar da baixa complexidade, usei essa atividade para fixar conceitos de aborda
 Segue o enunciado da atividade a seguir:
 
 
-![alt text for screen readers](atividade_01.jpg "Enunciado atividade")
