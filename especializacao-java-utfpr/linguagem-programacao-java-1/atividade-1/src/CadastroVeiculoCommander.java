@@ -46,13 +46,15 @@ public class CadastroVeiculoCommander {
 
             String campoPlaca = entradaDados.lerValorTexto("Placa", "Informe a placa do veículo:");
             String campoModelo = entradaDados.lerValorTexto("Modelo", "Informe a modelo do veículo:");
-            String campoMarca = entradaDados.lerValorTexto("Marca", "Informe a placa do marca:");
+            String campoMarca = entradaDados.lerValorTexto("Marca", "Informe a placa do veículo:");
+            String campoCor = entradaDados.lerValorTexto("Cor", "Informe a cor do veiculo:");
+            int campoQtdadeRodas = entradaDados.lerValorInteiro("Quant. Rodas", "Informe a quantidade de rodas do veiculo");
             int campoVelocMaxima = entradaDados.lerValorInteiro("Veloc. Maxima", "Informe a velocidade maxima do veículo:");
             int campoPistoes = entradaDados.lerValorInteiro("Pistoes", "Informe a quantidade de pistões do veículo:");
             int campoPotencia = entradaDados.lerValorInteiro("Potencia", "Informe a quantidade de potencia do veiculo");
 
             this.veiculo = new Veiculo();
-            this.veiculo.preencherDados(campoPlaca, campoModelo, campoMarca, campoVelocMaxima, campoPistoes, campoPotencia);
+            this.veiculo.preencherDados(campoPlaca, campoModelo, campoMarca, campoVelocMaxima, campoCor, campoQtdadeRodas, campoPistoes, campoPotencia);
 
             this.veiculoRepository.adicionarVeiculo(this.veiculo);
 

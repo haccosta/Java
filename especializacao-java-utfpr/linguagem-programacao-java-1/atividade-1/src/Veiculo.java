@@ -4,6 +4,8 @@ public class Veiculo {
     private String modelo;
     private float velocMax;
     private Motor motor;
+    private String cor;
+    private int qtdadeRodas;
 
     public Veiculo() {
         this.placa = "";
@@ -11,6 +13,9 @@ public class Veiculo {
         this.marca = "";
         this.velocMax = 0;
         this.motor = new Motor();
+        this.cor = "";
+        this.qtdadeRodas = 0;
+
 
     }
     public void setPlaca(String placa) {
@@ -53,16 +58,26 @@ public class Veiculo {
         return motor;
     }
 
+    public String getCor() {
+        return cor;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+
     public String toString() {
         return "[Modelo: " + this.modelo + " Marca: " + this.marca + " Placa: " + this.placa + " Velocidade Max:  " + this.velocMax +
                 " " + this.motor.toString() + "]";
     }
 
-    public void preencherDados(String placa, String modelo, String marca, float velocMax, int qtdePistoes, int qtdePotencia){
+    public void preencherDados(String placa, String modelo, String marca, float velocMax, String cor, int qtdadeRodas, int qtdePistoes, int qtdePotencia){
         this.placa = placa;
         this.marca = marca;
         this.modelo = modelo;
         this.velocMax = velocMax;
+        this.cor = this.cor;
+        this.qtdadeRodas = qtdadeRodas;
         this.motor.preencherDadosMotor(qtdePistoes, qtdePotencia);
     }
 }
